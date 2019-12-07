@@ -70,9 +70,10 @@
             vidyoConnector.Connect({
                 host: "prod.vidyo.io",
                 token: 'cHJvdmlzaW9uADNGNDdDNkFFMEIzNEZBRkVAYjAwNmExLnZpZHlvLmlvADYzNzQyOTgzNTc1AAAyZjJmYmUwNjNlZWYyODNiNDQ0MTM1MmU4YmU4OTk1YjgwNDdhNmNhYTI5MTA4ZGYwYTg4MDA5ZDdiNTUxMTc5NTMzZmNhNDYyY2EwNDdlYWEyN2Y0ZWRkNWI0ZWVkMzQ=', //Generated Token
-                displayName: "user1", //User Name
+                displayName: name, //User Name                
                 resourceId: "VisualContactMeeting", //Conference Name
                 onSuccess: function () {
+                    console.log(displayName)
                     console.log("Sucessfully connected");
                 },
                 onFailure: function (reason) {
@@ -94,6 +95,7 @@
         src="https://static.vidyo.io/latest/javascript/VidyoClient/VidyoClient.js?onload=onVidyoClientLoaded&webrtc=true&plugin=false">
         </script>
     <h3>Vydio Example</h3>
+    Nombre de usuario: <input name="username" type="text" value="Username" />
     <button onclick="joinCall()">Connect</button>
     
     <div id="renderer"
